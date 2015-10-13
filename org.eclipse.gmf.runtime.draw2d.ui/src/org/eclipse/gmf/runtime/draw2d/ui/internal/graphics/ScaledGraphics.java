@@ -32,6 +32,7 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.graphics.FontMetrics;
+import org.eclipse.swt.graphics.GC;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.graphics.LineAttributes;
 import org.eclipse.swt.graphics.Path;
@@ -675,6 +676,21 @@ public class ScaledGraphics
 	public void restoreState() {
 		graphics.restoreState();
 		restoreLocalState(stack.get(stackPointer - 1));
+	}
+	
+	/**
+	 * This method requires advanced graphics support. A check should be made to
+	 * ensure advanced graphics is supported in the user's environment before
+	 * calling this method. See {@link GC#getAdvanced()}.
+	 * 
+	 * @see Graphics#rotate(float)
+	 */
+	public void rotate(float degrees) {
+		if (!GCUtilities.supportsAdvancedGraphics()) { 
+	        logAdvancedGraphicsWarning();
+	        return;
+	    }
+		graphics.rotate(degrees);
 	}
 	
 	/** @see Graphics#scale(double) */
