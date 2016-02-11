@@ -819,6 +819,20 @@ public class ScaledGraphics
 	}
 	
 	/**
+	 * @see Graphics#setLineDash(float[])
+	 */
+	public void setLineDash(float[] dash) {
+		graphics.setLineDash(dash);
+	}
+
+	/**
+	 * @see Graphics#setLineDashOffset(float)
+	 */
+	public void setLineDashOffset(float value) {
+		graphics.setLineDashOffset(value);
+	}
+	
+	/**
 	 * @see Graphics#setLineJoin(int)
 	 */
 	public void setLineJoin(int join) {
