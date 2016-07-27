@@ -1,0 +1,15 @@
+language: java
+branches:
+  only:
+  - gmf-runtime-fixes
+script: ./travis-build.sh
+jdk:
+  - oraclejdk8
+deploy:
+  skip_cleanup: true
+  on: gmf-runtime-fixes
+  provider: bintray
+  file: bintray.json
+  user: thearchonius
+  key:
+    secure: Wv7XRK21E5vcTgM9mIesGQq/RZfCIat4JKQB5cf1qXBbI9FIU4NJP5T1AZUZMxiN4+rSI8yfAw7Wj9DjOHvwkuIHJtceSIZdmR397t/bzvmiLQYG+OPx8U8S/aIXJn9CWnBVeJ6lrWplVKgbmEV7t/WEW0hvayQQrat+P86eHt7oj4bDx6a1u2gQqqoTVdUFKyaM1ciEVbNOTRYm7BkTu5v2fWGTg1Am5CtZ1MSx4DWNrgdkurnbEVu1xTEC8cAsuJftGmTxee8uOdmdY2byxbQ1l1unnnO/uKQl+nK0VeNUAo+q6NMAkAlY+NwV5FQg6IoSsQX0d76decBLzDn6JV4MiwqgExMrYEYOtqI/oGh43uf9O4Kk2+Hmt93GzFXqXeTtet+3GEGJjFWZbdq5TMXUfrWMP7Dbb/IYOovrhzkTyWbMhOv4/czs6Eb9O4JrsikSyQwgZCXJjP0uwN0IkK7v6DPdwXZvFXVzY8u9+bWGLBtI0O5ll9Z8rTLQWngxTg8ddkg9rtx9PY7xajb/2KlJtOa5W7MEhkVeUoTrKl5xllNu6zb3utDeViQD1jSdcPnRBz8KWArJpq1iJKYEBs3I4HK4tb5IQBf3uLO4qx8wGf7+z4mxnp2mw+TGmbTMHOd5DvoikGWQb8UP+2f0Qv6VocldLXT+p5MIB0RElNU=
