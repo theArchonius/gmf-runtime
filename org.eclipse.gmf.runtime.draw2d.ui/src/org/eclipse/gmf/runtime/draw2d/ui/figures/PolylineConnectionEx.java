@@ -1530,6 +1530,12 @@ public class PolylineConnectionEx extends PolylineConnection implements IPolygon
 		return PointListUtilities.calcRoundedCornersPolyline(getPoints(), getRoundedBendpointsRadius(), 
 				rForBendpointArc, calculateAppoxPoints);
 	}
+	
+	@Override
+	public void layout() {
+		getBounds(); /* avoid null bounds */
+		super.layout();
+	}
 
 	
 }
