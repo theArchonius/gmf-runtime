@@ -6,15 +6,19 @@
     },
 
     "version": {
-        "name": "1.10"
+        "name": "1.10.1",
+        "desc": "1st Bugfix release",
+        "released": "2017-03-01",
+        "attributes": [],
+        "gpgSign": false
     },
 
     "files":
         [
-        {"includePattern": "org\.eclipse\.gmf\.runtime\.repository/target/repository/(artifacts.jar)", "uploadPattern": "$1", "matrixParams": { "override": 1} },
-        {"includePattern": "org\.eclipse\.gmf\.runtime\.repository/target/repository/(content.jar)", "uploadPattern": "$1", "matrixParams": { "override": 1} },
-        {"includePattern": "org\.eclipse\.gmf\.runtime\.repository/target/repository/features/(.*)", "uploadPattern": "/gmf-runtime/1\.10/features/$1" },
-        {"includePattern": "org\.eclipse\.gmf\.runtime\.repository/target/repository/plugins/(.*)", "uploadPattern": "/gmf-runtime/1\.10/plugins/$1" }
+        {"includePattern": "org\.eclipse\.gmf\.runtime\.repository/target/repository/(artifacts.jar)", "uploadPattern": "$1", "matrixParams": { "override": 0} },
+        {"includePattern": "org\.eclipse\.gmf\.runtime\.repository/target/repository/(content.jar)", "uploadPattern": "$1", "matrixParams": { "override": 0} },
+        {"includePattern": "org\.eclipse\.gmf\.runtime\.repository/target/repository/features/(.*)", "uploadPattern": "/gmf-runtime/1\.10\.1/features/$1" },
+        {"includePattern": "org\.eclipse\.gmf\.runtime\.repository/target/repository/plugins/(.*)", "uploadPattern": "/gmf-runtime/1\.10\.1/plugins/$1" }
         ],
     "publish": true
 }
